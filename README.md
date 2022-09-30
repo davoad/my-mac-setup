@@ -40,21 +40,20 @@ Allow fonts to be installed.
 
 Preferences→Profiles→Colors
 
- - →Color Presets→Solarized Dark
- - Set Background to #002b36
-
+- →Color Presets→Solarized Dark
+- Set Background to #002b36
 
 ### Karabiner Elements
 
 #### Map CAPS Lock to Ctrl-L
 
-Under *Simple Modifications*, map CAPS to Ctrl-Left.
+Under _Simple Modifications_, map CAPS to Ctrl-Left.
 
-![CAPS to Ctrl](images/caps-lock-left-contril.jpg)
+![CAPS to Ctrl](images/caps-lock-left-control.jpg)
 
 #### Map Escape to CAPS Lock
 
-Go to 
+Go to
 
 https://ke-complex-modifications.pqrs.org/
 
@@ -64,16 +63,15 @@ and search for
 ctrl + [ escape
 ```
 
-Select *Vim style escape key mapping*
+Select _Vim style escape key mapping_
 
 Import
 
-Enable *Map ctrl + [ to escape*
+Enable _Map ctrl + [ to escape_
 
+#### Vim style arrow keys
 
-#### Vim style arrow keys 
-
-Go to 
+Go to
 
 https://ke-complex-modifications.pqrs.org/
 
@@ -83,8 +81,8 @@ and search for
 vi style arrows
 ```
 
-Select *Vim style escape key mapping*
+Select _Vim style escape key mapping_
 
 Import
 
-Enable *Fn + h/j/k/l to Arrows*
+Enable _Fn + h/j/k/l to Arrows_
