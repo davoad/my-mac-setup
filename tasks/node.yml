@@ -10,11 +10,11 @@
   tags: node
 
 - name: Install Node.js LTS
-  shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && nvm install v16.17.0
+  shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && nvm install --lts
   tags: node
 
 - name: Setup to use LTS
-  shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && nvm use v16.17.0
+  shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && nvm use --lts
   tags: node
 
 - name: Set default node version for NVM
@@ -22,5 +22,5 @@
   tags: node
 
 - name: Install Yarn
-  shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && $HOME/.nvm/versions/node/v16.17.0/bin/npm install --global yarn@1.22.19
+  shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && corepack enable
   tags: node
