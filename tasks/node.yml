@@ -1,33 +1,26 @@
 - name: Install nvm for node version management
   homebrew: name=nvm
-  tags:
-    node
+  tags: node
 
 - name: Add nvm to .zshrc
   lineinfile: dest=~/.zshrc line='{{ item }}' create=yes
   with_items:
     - export NVM_DIR="$HOME/.nvm"
     - . "$(brew --prefix nvm)/nvm.sh"
-  tags:
-    node
+  tags: node
 
 - name: Install Node.js LTS
   shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && nvm install v16.17.0
-  tags:
-    node
+  tags: node
 
 - name: Setup to use LTS
   shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && nvm use v16.17.0
-  tags:
-    node
+  tags: node
 
 - name: Set default node version for NVM
   shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && nvm alias default node
-  tags:
-    node
+  tags: node
 
 - name: Install Yarn
-  shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && $HOME/.nvm/versions/node/v16.17.0/bin/npm install yarn@1.22.19
-  tags:
-    node
-
+  shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && $HOME/.nvm/versions/node/v16.17.0/bin/npm install --global yarn@1.22.19
+  tags: node
