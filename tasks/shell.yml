@@ -1,0 +1,27 @@
+- name: Install ohmyzsh
+  shell: /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  args:
+    creates: ~/.oh-my-zsh
+  tags:
+    shell
+
+- name: Install zsh-autosuggestions
+  ansible.builtin.git:
+    repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
+    dest: "~/.oh-my-zsh/plugins/zsh-autosuggestions"
+  tags:
+    shell
+
+- name: Install powerline theme
+  ansible.builtin.git:
+    repo: 'https://github.com/romkatv/powerlevel10k.git'
+    dest: "~/.oh-my-zsh/custom/themes/powerlevel10k"
+    depth: 1
+  tags:
+    shell
+
+- name: Install tmux terminal multiplexer
+  homebrew: name=tmux
+  tags:
+    shell
+

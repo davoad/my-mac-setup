@@ -1,0 +1,17 @@
+---
+- hosts: all
+
+  pre_tasks:
+    - hostname: name=davoad-mac
+      become: yes
+
+  tasks:
+    - include: tasks/git.yml
+    - include: tasks/fonts.yml
+    - include: tasks/apps.yml
+    - include: tasks/node.yml
+    - include: tasks/lsp.yml
+    - include: tasks/shell.yml
+    - include: tasks/dotfiles.yml
+    - include: tasks/vim.yml
+    - include: tasks/utils.yml

@@ -1,0 +1,10 @@
+- name: Installing stow
+  homebrew: name=stow
+
+- name: Clone .dotfiles
+  ansible.builtin.git:
+    repo: 'https://github.com/davoad/dotfiles.git'
+    dest: "~/.dotfiles"
+
+- name: Stow dotfiles
+  shell: cd $HOME/.dotfiles && . ./install.sh

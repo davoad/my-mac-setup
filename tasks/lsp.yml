@@ -1,0 +1,14 @@
+- name: Install typescript language server
+  shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && $HOME/.nvm/versions/node/v16.17.0/bin/npm install typescript-language-server typescript --global
+  tags:
+    lsp
+
+- name: Install tailwindcss language server
+  shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && $HOME/.nvm/versions/node/v16.17.0/bin/npm install @tailwindcss/language-server --global
+  tags:
+    lsp
+
+- name: Install lua language server
+  homebrew: name=lua-language-server
+  tags:
+    lsp

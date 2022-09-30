@@ -1,0 +1,19 @@
+- name: Installing iterm2
+  homebrew_cask: name=iterm2
+  tags:
+    apps
+
+- name: Installing Karabiner elements
+  homebrew_cask: name=karabiner-elements
+  tags:
+    apps
+
+- name: Installing numi text calculator
+  homebrew_cask: name=numi
+  tags:
+    apps
+
+- name: Installing Alfred
+  homebrew_cask: name=alfred
+  tags:
+    apps

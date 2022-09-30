@@ -1,0 +1,8 @@
+- name: Install git
+  homebrew: name=git
+
+- name: Install lazy git
+  homebrew: name=jesseduffield/lazygit/lazygit
+
+- name: Install git delta
+  homebrew: name=git-delta
