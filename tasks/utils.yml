@@ -1,14 +1,19 @@
 - name: Install ripgrep
   homebrew: name=ripgrep
-  tags:
-    utils
+  tags: utils
 
 - name: Install prettier
   homebrew: name='fsouza/prettierd/prettierd'
-  tags:
-    utils
+  tags: utils
 
 - name: Install eslint_d
   shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && $HOME/.nvm/versions/node/v16.17.0/bin/npm install eslint_d --global
-  tags:
-    utils
+  tags: utils
+
+- name: Install fd
+  homebrew: name=fd
+  tags: utils
+
+- name: Install exa
+  homebrew: name=exa
+  tags: utils
